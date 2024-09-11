@@ -1,7 +1,8 @@
-const { web } = require("projen");
-const project = new web.ReactProject({
-  defaultReleaseBranch: "main",
-  name: "roles-controller",
+import { web } from 'projen';
+const project = new web.ReactTypeScriptProject({
+  defaultReleaseBranch: 'main',
+  name: 'roles-controller',
+  projenrcTs: true,
 
   // deps: [],                /* Runtime dependencies of this module. */
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
