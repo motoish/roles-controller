@@ -71,6 +71,11 @@
       "type": "build"
     },
     {
+      "name": "jest",
+      "version": "29.7.0",
+      "type": "build"
+    },
+    {
       "name": "lint-staged",
       "version": "^15.2.10",
       "type": "build"

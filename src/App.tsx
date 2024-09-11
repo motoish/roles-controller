@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { getUserRoles, assignUserRoles, removeUserRoles } from './auth0Api'
 
-interface Role {
+type Role = {
   id: string
   name: string
 }
