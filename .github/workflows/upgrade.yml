@@ -16,8 +16,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v1
       - name: Install dependencies
-        run: yarn install --check-files --frozen-lockfile
+        run: bun install --frozen-lockfile
       - name: Upgrade dependencies
         run: npx projen upgrade
       - name: Find mutations

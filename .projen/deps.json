@@ -45,6 +45,10 @@
       "type": "build"
     },
     {
+      "name": "eslint-config-prettier",
+      "type": "build"
+    },
+    {
       "name": "eslint-import-resolver-typescript",
       "type": "build"
     },
@@ -53,8 +57,26 @@
       "type": "build"
     },
     {
+      "name": "eslint-plugin-prettier",
+      "type": "build"
+    },
+    {
       "name": "eslint",
       "version": "^8",
+      "type": "build"
+    },
+    {
+      "name": "husky",
+      "version": "^9.1.5",
+      "type": "build"
+    },
+    {
+      "name": "lint-staged",
+      "version": "^15.2.10",
+      "type": "build"
+    },
+    {
+      "name": "prettier",
       "type": "build"
     },
     {
@@ -84,6 +106,16 @@
       "name": "@types/express",
       "version": "4.17.13",
       "type": "override"
+    },
+    {
+      "name": "@babel/plugin-proposal-private-property-in-object",
+      "version": "7.21.11",
+      "type": "runtime"
+    },
+    {
+      "name": "axios",
+      "version": "1.7.7",
+      "type": "runtime"
     },
     {
       "name": "react",

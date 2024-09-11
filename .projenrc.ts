@@ -1,12 +1,48 @@
-import { web } from 'projen';
+import { web, javascript } from 'projen'
+
 const project = new web.ReactTypeScriptProject({
   defaultReleaseBranch: 'main',
   name: 'roles-controller',
   projenrcTs: true,
+  pullRequestTemplateContents: [
+    'Fix#',
+    '',
+    '## :classical_building: Background',
+    '',
+    '### :bookmark: URL',
+    '',
+    '## :point_right: Checkpoint',
+    '',
+    '### :white_check_mark: Flow',
+    '',
+    '### :warning: Impact',
+    '',
+    '## :memo: Changelog',
+    '',
+  ],
+  prettier: true,
+  prettierOptions: {
+    settings: {
+      semi: false,
+      singleQuote: true,
+    },
+  },
+  deps: [
+    'axios@1.7.7',
+    'react@18.3.1',
+    'react-dom@18.3.1',
+    '@babel/plugin-proposal-private-property-in-object@7.21.11',
+    'web-vitals@4.2.3',
+  ],
+  devDeps: [
+    'husky@^9.1.5',
+    'lint-staged@^15.2.10',
+    'typescript@5.6.2',
+    '@types/react@18.3.5',
+    '@types/react-dom@18.3.0',
+  ],
+  packageName: 'roles-controller',
+  packageManager: javascript.NodePackageManager.BUN,
+})
 
-  // deps: [],                /* Runtime dependencies of this module. */
-  // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
-  // devDeps: [],             /* Build dependencies for this module. */
-  // packageName: undefined,  /* The "name" in package.json. */
-});
-project.synth();
+project.synth()
